@@ -1,0 +1,16 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <color id="purple" value="#7a2e8a"/>
+  </defs>
+  
+  <path 
+    d="M 145 170 C 145 40 380 40 380 170 C 380 280 256 250 256 340" 
+    stroke="#7a2e8a" 
+    stroke-width="85" 
+    fill="none" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"
+  />
+  
+  <rect x="213" y="400" width="86" height="86" rx="35" fill="#7a2e8a" />
+</svg>

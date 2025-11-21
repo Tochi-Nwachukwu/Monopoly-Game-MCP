@@ -1,0 +1,35 @@
+<svg width="512" height="300" viewBox="0 0 512 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <color id="glass-main" value="#f7f9fa"/>
+    <color id="glass-shadow" value="#e3e6e8"/>
+    <color id="housing" value="#eeeeee"/>
+    <color id="metal-base" value="#bdc3c7"/>
+    <color id="metal-dark" value="#95a5a6"/>
+    <color id="tip" value="#555555"/>
+  </defs>
+
+  <g id="base">
+    <path d="M 40 135 L 60 125 L 60 175 L 40 165 Z" fill="#555555" />
+    
+    <rect x="60" y="115" width="70" height="70" rx="2" fill="#bdc3c7" />
+    
+    <line x1="60" y1="128" x2="130" y2="128" stroke="#95a5a6" stroke-width="3" />
+    <line x1="60" y1="140" x2="130" y2="140" stroke="#95a5a6" stroke-width="3" />
+    <line x1="60" y1="152" x2="130" y2="152" stroke="#95a5a6" stroke-width="3" />
+    <line x1="60" y1="164" x2="130" y2="164" stroke="#95a5a6" stroke-width="3" />
+    <line x1="60" y1="176" x2="130" y2="176" stroke="#95a5a6" stroke-width="3" />
+  </g>
+
+  <path d="M 130 115 L 180 90 L 180 210 L 130 185 Z" fill="#eeeeee" />
+  <rect x="130" y="115" width="5" height="70" fill="#e0e0e0" />
+
+  <g id="glass" stroke="#e3e6e8" stroke-width="2">
+    <path d="M 220 80 Q 250 60 280 80 L 270 220 Q 240 240 210 220 Z" fill="#f0f2f5" />
+    <path d="M 300 80 Q 330 60 360 80 L 350 220 Q 320 240 290 220 Z" fill="#f0f2f5" />
+
+    <path d="M 180 100 L 230 80 L 240 220 L 180 200 Z" fill="#f7f9fa" rx="20" />
+    <circle cx="235" cy="90" r="25" fill="#f7f9fa" /> <circle cx="210" cy="210" r="25" fill="#f7f9fa" /> <path d="M 250 80 L 300 80 L 310 220 L 260 220 Z" fill="#f7f9fa" />
+    <circle cx="275" cy="80" r="26" fill="#f7f9fa" /> <circle cx="285" cy="220" r="26" fill="#f7f9fa" /> <path d="M 320 80 L 370 90 L 360 210 L 320 220 Z" fill="#f7f9fa" />
+    <circle cx="345" cy="85" r="25" fill="#f7f9fa" /> <circle cx="340" cy="215" r="25" fill="#f7f9fa" /> <circle cx="380" cy="150" r="30" fill="#f7f9fa" />
+  </g>
+</svg>
