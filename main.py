@@ -1,10 +1,11 @@
-from src import roll_dice
+# from src import Tiles
+from src.game import GameState
 
 
 def main():
     print("Hello from monopoly-game-mcp!")
-    roll = roll_dice.roll_dice()
-    print(roll)
+    game = GameState(2)
+    game.initialize_game()
 
 
 if __name__ == "__main__":

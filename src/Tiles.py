@@ -1,26 +1,23 @@
+from src.constants import tile_constants
+
 class Land:
-    def __init__(self, id, display_name, land_price, color_group) -> None:
+    def __init__(self, id) -> None:
         self.id = id
         self.position = id
-        self.display_name = display_name
-        self.land_price = land_price
+        self.location_name = tile_constants[id]["location_name"]
+        self.land_price = tile_constants[id]["land_price"]
         self.buyable = True
         self.tile_type = "land"
         self.has_buildings = False
         self.has_image = False
         self.has_owner = False
-        self.house_build_price=50
+        self.house_cost = tile_constants[id]["house_cost"]
         self.owner = ""
         self.rent_value = 0
-        self.tile_color = "#0003A6"
-        self.color_group=color_group
-        self.building_details = (
-            {
-                "owner": "",
-                "house": {"number_of_houses": 0, "house_rent": 0},
-                "hotels": {"number_of_hotels": 0, "house_rent": 0},
-            },
-        )
+        self.color_code = tile_constants[id]["color_code"]
+        self.house_count = 0
+        self.has_hotel = False
+        self.mortgage_value = tile_constants[id]["mortgage_value"]
 
     def get_owner(self):
         return self.owner
@@ -59,24 +56,43 @@ class Land:
         props = {
             "id": self.id,
             "position": self.position,
-            "display_name": self.display_name,
+            "location_name": self.location_name,
             "land_price": self.land_price,
             "buyable": self.buyable,
             "tile_type": self.tile_type,
             "has_buildings": self.has_buildings,
-            "building_details":self.building_details,
+            "house_count": self.house_count,
             "has_image": self.has_image,
             "has_owner": self.has_owner,
             "owner": self.owner,
             "rent_value": self.rent_value,
-            "tile_color": self.tile_color,
-            "house_build_price":self.house_build_price
-            
+            "color_code": self.color_code,
+            "house_cost": self.house_cost,
         }
         return props
-    
+
     def calculate_house_rent(self):
         n_houses = self.get_house_count()
-        
-        
-        
+        rent = tile_constants[id]["rent"][n_houses]
+        self.rent_value = rent
+        return rent
+
+
+class Railroad:
+    def __init__(self, id) -> None:
+        self.owner = ""
+        self.id = id
+        self.has_owner = False
+        self.position = id
+        self.location_name = tile_constants[id]["location_name"]
+        self.land_price = tile_constants[id]["land_price"]
+
+        def update_owner(self, owner):
+            self.has_owner = True
+            self.owner = owner
+            return {
+                "status": True,
+                "message": f"The owner of this property has been updated to {owner}",
+            }
+
+
